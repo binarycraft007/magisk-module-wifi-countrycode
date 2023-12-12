@@ -9,4 +9,5 @@ MODDIR=${0%/*}
 echo "country=US" >> /vendor/etc/wifi/wpa_supplicant.conf
 echo "country=US" >> /vendor/etc/wifi/wpa_supplicant_overlay.conf
 resetprop -n ro.boot.wificountrycode US
+resetprop -n ro.boot.hwc US
 iw reg set US

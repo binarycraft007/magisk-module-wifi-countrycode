@@ -6,5 +6,7 @@
 # if Magisk change its mount point in the future
 MODDIR=${0%/*}
 # This script will be executed in post-fs-data mode
+echo "country=US" >> /vendor/etc/wifi/wpa_supplicant.conf
+echo "country=US" >> /vendor/etc/wifi/wpa_supplicant_overlay.conf
 resetprop -n ro.boot.wificountrycode US
 iw reg set US

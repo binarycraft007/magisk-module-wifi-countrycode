@@ -12,10 +12,10 @@ jobs:
       uses: thedoctor0/zip-release@master
       with:
         type: 'zip'
-        filename: 'magisk-module-oplus-cn2global.zip'
+        filename: 'magisk-module-wifi-countrycode.zip'
         exclusions: '*.git* /*node_modules/* .editorconfig'
     - name: Upload Release
       uses: ncipollo/release-action@v1
       with:
-        artifacts: "magisk-module-oplus-cn2global.zip"
+        artifacts: "magisk-module-wifi-countrycode.zip"
         token: ${{ secrets.GITHUB_TOKEN }}

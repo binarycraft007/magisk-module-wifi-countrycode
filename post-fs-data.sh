@@ -22,8 +22,10 @@ maybe_set_prop() {
     fi
 }
 
-maybe_set_prop gsm.sim.operator.numeric "," "44011,44011"
-maybe_set_prop gsm.sim.operator.iso-country "," "jp,jp"
+resetprop -n gsm.sim.operator.numeric "310260,310260"
+resetprop -n gsm.sim.operator.iso-country "us,us"
+resetprop -n gsm.operator.numeric "310260,310260"
+resetprop -n gsm.operator.iso-country "us,us"
 
 # Disable CN GMS restriction
 mount -o ro,bind $MODDIR/xml/permissions/oplus.feature.control_cn_gms.xml /mnt/vendor/my_bigball/etc/permissions/oplus.feature.control_cn_gms.xml
